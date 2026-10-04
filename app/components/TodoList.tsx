@@ -13,9 +13,8 @@ type TodoListProps = {
 export default function TodoList({
   todos,
   onToggleTodo,
-  onDeleteTodo
+  onDeleteTodo,
 }: TodoListProps) {
-
   if (todos.length === 0) {
     return (
       <div className="text-center p-8 text-gray-500 border-2 border-dashed border-gray-200 rounded-md">
@@ -42,6 +41,7 @@ export default function TodoList({
             key={todo.id}
             todo={todo}
             onToggle={onToggleTodo}
+            onDelete={onDeleteTodo}
           />
         ))}
       </ul>
